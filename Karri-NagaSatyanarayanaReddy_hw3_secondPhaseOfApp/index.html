@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+            
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label, .form-container input, .form-container select, .form-container textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .form-container input, .form-container select, .form-container textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="form-container">
+        <h2>User Information</h2>
+        <form action="process_form.php" method="post" enctype="multipart/form-data">
+            <!-- Section 1: User Information -->
+            <label for="current_location">My current location:</label>
+            <input type="text" id="current_location" name="current_location" required>
+
+            <label for="from">I am from:</label>
+            <input type="text" id="from" name="from" required>
+
+            <label for="desired_location">I'd like to be in:</label>
+            <input type="text" id="desired_location" name="desired_location" required>
+
+            <label for="family_origin">My family is from:</label>
+            <input type="text" id="family_origin" name="family_origin" required>
+
+            <!-- Section 2: Additional Facts -->
+            <h2>Additional Facts</h2>
+            <label for="place_of_birth">My place of birth:</label>
+            <input type="text" id="place_of_birth" name="place_of_birth" required>
+
+            <label for="current_residence">Where I live now:</label>
+            <input type="text" id="current_residence" name="current_residence" required>
+
+            <label for="desired_residence">Where I'd like to live:</label>
+            <input type="text" id="desired_residence" name="desired_residence" required>
+
+            <label for="significant_other_origin">Significant other's place of birth:</label>
+            <input type="text" id="significant_other_origin" name="significant_other_origin" required>
+
+            <!-- Section 3: Investment Portfolio -->
+            <h2>Investment Portfolio</h2>
+            <label for="my_investment">My investment portfolio:</label>
+            <textarea id="my_investment" name="my_investment" required></textarea>
+
+            <label for="family_investment">Family investment portfolio:</label>
+            <textarea id="family_investment" name="family_investment" required></textarea>
+
+            <label for="other_investment">Other's investment portfolio:</label>
+            <textarea id="other_investment" name="other_investment" required></textarea>
+
+            <!-- Section 4: Upload Picture/Resume -->
+            <h2>Uploads</h2>
+            <label for="picture">Upload a picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*">
+
+            <label for="resume">Upload a resume/CV:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+            <!-- Section 5: Additional Facts -->
+            <h2>Additional Facts</h2>
+            <label for="additional_fact_1">Please tell us about you Hobbies:</label>
+            <input type="text" id="additional_fact_1" name="additional_fact_1">
+
+            <label for="additional_fact_2">Contact Details:</label>
+            <input type="text" id="additional_fact_2" name="additional_fact_2">
+
+            <!-- Section 6: Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
